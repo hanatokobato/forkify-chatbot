@@ -1,5 +1,8 @@
 FROM ruby:2.5.8-alpine
 
+RUN apk add --update --no-cache \
+    libxslt-dev libxml2-dev build-base postgresql-dev less bash
+
 ENV GEM_HOME /app/vendor/bundle
 ENV BUNDLE_PATH /app/vendor/bundle
 ENV BUNDLE_BIN /app/vendor/bundle/bin
