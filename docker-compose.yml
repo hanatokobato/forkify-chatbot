@@ -22,5 +22,19 @@ services:
       DB_USER: dbuser
       DB_PASSWORD: dbpass
       DB_HOST: psql
+      REDIS_URL: redis://redis:6379
+  redis:
+    image: redis
+  ngrok: # curl localhost:4041/api/tunnels
+    image: wernight/ngrok
+    ports:
+      - '4041:4040'
+    command:
+      - /bin/sh
+      - -c
+      - |
+        ngrok http -bind-tls=true bot:5000
+    depends_on:
+      - bot
 volumes:
   bundle_cache:

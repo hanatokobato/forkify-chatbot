@@ -46,6 +46,7 @@ GEM
     nokogiri (1.12.5)
       mini_portile2 (~> 2.6.1)
       racc (~> 1.4)
+    pg (1.4.2)
     puma (3.12.6)
     racc (1.6.0)
     rack (2.2.4)
@@ -77,7 +78,6 @@ GEM
       rack (~> 2.2)
       rack-protection (= 2.2.2)
       tilt (~> 2.0)
-    sqlite3 (1.4.4)
     stealth (1.1.6)
       activesupport (~> 5.2)
       multi_json (~> 1.12)
@@ -97,8 +97,8 @@ PLATFORMS
 DEPENDENCIES
   activerecord (~> 5.2)
   foreman
+  pg
   railties (~> 5.2)
-  sqlite3
   stealth (~> 1.0)
 
 BUNDLED WITH
