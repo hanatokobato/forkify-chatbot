@@ -33,7 +33,7 @@ services:
       - /bin/sh
       - -c
       - |
-        ngrok http -bind-tls=true bot:5000
+        ngrok http -bind-tls=true --authtoken $NGROK_AUTH --log=stdout bot:5000
     depends_on:
       - bot
 volumes:

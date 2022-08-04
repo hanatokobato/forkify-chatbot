@@ -7,11 +7,12 @@ gem 'activerecord', '~> 5.2'
 gem 'pg'
 
 # Uncomment to enable the Stealth Facebook Driver
-# gem 'stealth-facebook'
+gem 'stealth-facebook'
 
 # Uncomment to enable the Stealth Twilio SMS Driver
 # gem 'stealth-twilio'
 
 group :development do
   gem 'foreman'
+  gem 'dotenv'
 end
