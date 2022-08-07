@@ -5,16 +5,19 @@ default: &default
     setup:
       greeting: # Greetings are broken up by locale
         - locale: default
-          text: "Welcome to my Facebook Bot."
+          text: 'Welcome to my Facebook Bot.'
       get_started:
         payload: new_user
       persistent_menu:
         - locale: default
           composer_input_disabled: false
           call_to_actions:
-          - type: payload
-            text: Some Button
-            payload: some_button
+            - type: payload
+              text: Some Button
+              payload: some_button
+            - type: payload
+              text: Restart
+              payload: developer_restart
   #
   # ===========================================
   # ======== Example SMS Service Setup ========
